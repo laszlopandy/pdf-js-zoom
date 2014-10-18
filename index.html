@@ -1,0 +1,25 @@
+<!doctype html>
+<html>
+
+<head>
+  <!-- In production, only one script (pdf.js) is necessary -->
+  <!-- In production, change the content of PDFJS.workerSrc below -->
+  <script src="pdf.js"></script>
+
+  <script>
+    // Specify the main script used to create a new PDF.JS web worker.
+    // In production, leave this undefined or change it to point to the
+    // combined `pdf.worker.js` file.
+    PDFJS.disableFontFace = true;
+    // PDFJS.disableWorker = true;
+    PDFJS.workerSrc = 'pdf.worker.js';
+  </script>
+</head>
+
+<body>
+  <canvas id="the-canvas" style="border:1px solid black;"></canvas>
+  <div><span id="time"></span></div>
+  <script src="hello.js"></script>
+</body>
+
+</html>
